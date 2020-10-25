@@ -82,3 +82,25 @@ let storage = {
         return typeof window.localStorage[key] !== 'undefined';
     }
 }
+
+let foreach = function (items, func) {
+    /**
+     * foreach
+     *
+     * @example let items = document.querySelectorAll('.items'); foreach(items, function(item, index, items){ console.log(item, index, items); })
+     *
+     * @param items: items for foreach
+     * @param func: function for send items into it
+     *
+     * @return void
+     **/
+    if (items instanceof HTMLElement) {
+        return func(items, 0, items);
+    } else if (items.forEach) {
+        items.forEach((item, index, items) => func(item, index, items))
+    } else {
+        for (let item in items) {
+            func(items[item], item, items);
+        }
+    }
+}
