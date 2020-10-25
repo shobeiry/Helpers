@@ -1,6 +1,9 @@
 # Helpers
 Helpful helpers for programming languages
 
+- [JAVASCRIPT](#javascript)
+- [PHP](#php)
+
 ## JAVASCRIPT
 Helpful javascript helpers
 
