@@ -1,0 +1,71 @@
+=transition($t)
+  transition: $t
+  -webkit-transition: $t
+  -moz-transition: $t
+  -o-transition: $t
+  -ms-transition: $t
+
+=transition-duration($t)
+  transition-duration: $t
+  -webkit-transition-duration: $t
+  -moz-transition-duration: $t
+  -o-transition-duration: $t
+  -ms-transition-duration: $t
+
+=box-shadow($s)
+  box-shadow: $s
+  -webkit-box-shadow: $s
+  -moz-box-shadow: $s
+  -o-box-shadow: $s
+  -ms-box-shadow: $s
+
+=radius($r)
+  border-radius: $r
+  -webkit-border-radius: $r
+  -moz-border-radius: $r
+  -o-border-radius: $r
+  -ms-border-radius: $r
+
+=transform($t)
+  transform: $t
+  -webkit-transform: $t
+  -moz-transform: $t
+  -o-transform: $t
+  -ms-transform: $t
+
+=translateX($x)
+  +transform(translateX($x))
+
+=translateY($y)
+  +transform(translateY($y))
+
+=translate($x,$y)
+  +transform(translate($x, $y))
+
+=border-top-radius($r)
+  border-top-right-radius: $r
+  border-top-left-radius: $r
+  -webkit-border-top-left-radius: $r
+  -webkit-border-top-right-radius: $r
+
+=border-top-right-radius($r)
+  border-top-right-radius: $r
+  -webkit-border-top-right-radius: $r
+
+=border-top-left-radius($r)
+  border-top-left-radius: $r
+  -webkit-border-top-left-radius: $r
+
+=border-bottom-radius($r)
+  border-bottom-right-radius: $r
+  border-bottom-left-radius: $r
+  -webkit-border-bottom-left-radius: $r
+  -webkit-border-bottom-right-radius: $r
+
+=border-bottom-right-radius($r)
+  border-bottom-right-radius: $r
+  -webkit-border-bottom-right-radius: $r
+
+=border-bottom-left-radius($r)
+  border-bottom-left-radius: $r
+  -webkit-border-bottom-left-radius: $r
