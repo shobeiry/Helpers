@@ -17,17 +17,17 @@ class Minifier
         // Minify inline CSS declaration(s)
         if (strpos($html, ' style=') !== false) {
             $html = preg_replace_callback('#<([^<]+?)\s+style=([\'"])(.*?)\2(?=[\/\s>])#s', function ($matches) {
-                return '<' . $matches[1] . ' style=' . $matches[2] . minify_css($matches[3]) . $matches[2];
+                return '<' . $matches[1] . ' style=' . $matches[2] . self::css($matches[3]) . $matches[2];
             }, $html);
         }
         if (strpos($html, '</style>') !== false) {
             $html = preg_replace_callback('#<style(.*?)>(.*?)</style>#is', function ($matches) {
-                return '<style' . $matches[1] . '>' . minify_css($matches[2]) . '</style>';
+                return '<style' . $matches[1] . '>' . self::css($matches[2]) . '</style>';
             }, $html);
         }
         if (strpos($html, '</script>') !== false) {
             $html = preg_replace_callback('#<script(.*?)>(.*?)</script>#is', function ($matches) {
-                return '<script' . $matches[1] . '>' . minify_js($matches[2]) . '</script>';
+                return '<script' . $matches[1] . '>' . self::js($matches[2]) . '</script>';
             }, $html);
         }
 
