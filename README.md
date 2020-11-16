@@ -57,3 +57,5 @@ this class contain most usable functions
 |Function|Description|Example|
 |--------|-----------|-------|
 |human_readable_size|convert bytes to human readable size like as 25GB|`Util::human_readable_size($bytes, $precision);`|
+|is_ir_national_code|check input national code is iranian national code or not|`Util::is_ir_national_code(1111111111);`|
+|is_ir_mobile|check input number is iranian mobile number or not|`Util::is_ir_mobile(09111111111);`|
