@@ -1,46 +1,40 @@
-=transition($t)
-  transition: $t
-  -webkit-transition: $t
-  -moz-transition: $t
-  -o-transition: $t
-  -ms-transition: $t
+=support($key, $value)
+  #{$key}: $value
+  -webkit-#{$key}: $value
+  -moz-#{$key}: $value
+  -o-#{$key}: $value
+  -ms-#{$key}: $value
 
-=transition-duration($t)
-  transition-duration: $t
-  -webkit-transition-duration: $t
-  -moz-transition-duration: $t
-  -o-transition-duration: $t
-  -ms-transition-duration: $t
 
-=box-shadow($s)
-  box-shadow: $s
-  -webkit-box-shadow: $s
-  -moz-box-shadow: $s
-  -o-box-shadow: $s
-  -ms-box-shadow: $s
+=transition($value)
+  +support(transition, $value)
 
-=radius($r)
-  border-radius: $r
-  -webkit-border-radius: $r
-  -moz-border-radius: $r
-  -o-border-radius: $r
-  -ms-border-radius: $r
+=transition-duration($value)
+  +support(transition-duration, $value)
 
-=transform($t)
-  transform: $t
-  -webkit-transform: $t
-  -moz-transform: $t
-  -o-transform: $t
-  -ms-transform: $t
+=box-shadow($value)
+  +support(box-shadow, $value)
+
+=radius($value)
+  +support(border-radius, $value)
+
+=transform($transform)
+  +support(transform, $transform)
+
+=translate($x,$y)
+  +transform(translate($x, $y))
+
+=translate3d($x,$y,$length)
+  +transform(translate3d($x, $y, $length))
 
 =translateX($x)
   +transform(translateX($x))
 
-=translateY($y)
-  +transform(translateY($y))
+=translateY($Y)
+  +transform(translateY($Y))
 
-=translate($x,$y)
-  +transform(translate($x, $y))
+=translateZ($Z)
+  +transform(translateZ($Z))
 
 =border-top-radius($r)
   border-top-right-radius: $r

@@ -1,0 +1,47 @@
+@for $i from 0 through 10
+  $temp: $i * 5
+  $size: $temp + 0px
+  .m-#{$temp}
+    margin: $size
+  .mt-#{$temp}
+    margin-top: $size
+  .mb-#{$temp}
+    margin-bottom: $size
+  .mr-#{$temp}
+    margin-right: $size
+  .ml-#{$temp}
+    margin-left: $size
+  .mx-#{$temp}
+    margin-left: $size
+    margin-right: $size
+  .my-#{$temp}
+    margin-top: $size
+    margin-bottom: $size
+  .p-#{$temp}
+    padding: $size
+  .pt-#{$temp}
+    padding-top: $size
+  .pb-#{$temp}
+    padding-bottom: $size
+  .pr-#{$temp}
+    padding-right: $size
+  .pl-#{$temp}
+    padding-left: $size
+  .px-#{$temp}
+    padding-left: $size
+    padding-right: $size
+  .py-#{$temp}
+    padding-top: $size
+    padding-bottom: $size
+
+  $temp: $i * 100
+  $size: $temp + 0px
+  @if $temp == 100
+    .w-#{$temp}
+      width: $temp + 0%
+    .h-#{$temp}
+      height: $temp + 0%
+  .w-#{$temp}px
+    width: $size
+  .h-#{$temp}px
+    height: $size
