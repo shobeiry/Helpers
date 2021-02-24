@@ -36,13 +36,13 @@ class Str
     /**
      * format text
      *
-     * @example Str::format("hello %s %d", "world", 1202); // "hello world 1202"
+     * @example Str::f("hello %s %d", "world", 1202); // "hello world 1202"
      *
      * @param $str: text will be format
      * @param mixed ...$args: arguments
      * @return string: formatted text
      */
-    public static function format($str, ...$args)
+    public static function f($str, ...$args)
     {
         return sprintf($str, ...$args);
     }
