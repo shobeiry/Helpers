@@ -37,6 +37,20 @@ if (!String.prototype.isUUID) {
     };
 }
 
+if (!String.prototype.isNumeric) {
+    String.prototype.isNumeric = function () {
+        /**
+         * check string is numeric
+         *
+         * @example let temp = "2021".isNumeric() // temp is true
+         **/
+        let str = this;
+        if (typeof str != "string") return false // we only process strings!
+        return !isNaN(str) && // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
+            !isNaN(parseFloat(str)) // ...and ensure strings of whitespace fail
+    };
+}
+
 if (!String.prototype.isIP) {
     String.prototype.isIP = function () {
         /**
