@@ -15,6 +15,17 @@ if (!String.prototype.format) {
     };
 }
 
+if (!String.prototype.contains) {
+    String.prototype.contains = function (text) {
+        /**
+         * string check contains another string
+         *
+         * @example let temp = "hello world.".contains("llo") // temp is true
+         **/
+        return this.indexOf(text) !== -1;
+    };
+}
+
 if (!String.prototype.f) {
     String.prototype.f = function () {
         /**
